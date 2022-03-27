@@ -1,12 +1,4 @@
-﻿using Emily_s_Gallery_Inventory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TestProject;
-
-namespace TestProject
+﻿namespace TestProject
 {
     internal class MenuItemExit : MenuItem
     {
@@ -15,7 +7,7 @@ namespace TestProject
             this.Choice = "Exit";
         }
 
-        public override bool ExecuteChoice()
+        public override bool ExecuteChoice(List<string> painting)
         {
             return false;
         }

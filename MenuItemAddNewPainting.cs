@@ -1,20 +1,21 @@
-﻿using Emily_s_Gallery_Inventory;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace TestProject
+﻿namespace TestProject
 {
     internal class MenuItemAddNewPainting : MenuItem
     {
-        public static void Main()
+        public MenuItemAddNewPainting()
         {
-            List<string> painting = new List<string>();      
+            this.Choice = "Add New Painting";
+        }
+        public static void JustinMain()
+        {
+           
+        }
+
+        public override bool ExecuteChoice(List<string> painting)
+        {
             Console.WriteLine("Enter painting name:");
             string input = Console.ReadLine();
-          
+
             while (String.IsNullOrEmpty(input))
             {
 
@@ -26,7 +27,7 @@ namespace TestProject
 
             if (!String.IsNullOrEmpty(input))
             {
-                return;
+                return true;
             }
             Console.WriteLine("The painting you have entered is: " + " " + input);
             painting.Add(input);
@@ -37,11 +38,7 @@ namespace TestProject
 
             }
             Console.ReadLine();
-        }
-
-        public override bool ExecuteChoice()
-        {
-            throw new NotImplementedException();
+            return true;
         }
     }
 }

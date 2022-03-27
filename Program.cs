@@ -3,31 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Emily_s_Gallery_Inventory;
 using TestProject;
 
 //EmilysArtInventory
 
-namespace Emily_s_Gallery_Inventory
+namespace TestProject
 {
-    class Program
-    {
-        public void Main(string[] args)
-        {
-            var painting = new List<string> { "Kids", "Mom" };
-            Console.WriteLine(string.Join(", ", painting));
-        } 
 
-    }
 
     class MainClass
     {
         static List<MenuItem> menuItems = new List<MenuItem>();
-
-        public static void Main()
+        static List<string> painting = new List<string> { "Kids", "Mom" };
+       
+        public static void Main(string[] args)
         {
             menuItems.Add(new MenuItemAddNewPainting());
-            menuItems.Add(new MenuItemChoosePaintingtoUpdate());
+            menuItems.Add(new MenuItemNumberofPaintings());
             menuItems.Add(new MenuItemRemovePainting());
             menuItems.Add(new MenuItemExit());
 
@@ -42,8 +34,12 @@ namespace Emily_s_Gallery_Inventory
             Console.WriteLine("Program exited");
         }
 
-              public static bool MainMenu()
+        public static bool MainMenu()
         {
+            foreach (string p in painting)
+            {
+                Console.WriteLine(p);
+            }
             // show user a menu
             Console.WriteLine("Main Menu:");
 
@@ -61,7 +57,7 @@ namespace Emily_s_Gallery_Inventory
 
             if (userChoice < menuItems.Count)
             {
-                return menuItems[userChoice].ExecuteChoice();
+                return menuItems[userChoice].ExecuteChoice(painting);
             }
             else
             {
@@ -71,5 +67,7 @@ namespace Emily_s_Gallery_Inventory
             }
         }
     }
+   
 }
+    
 

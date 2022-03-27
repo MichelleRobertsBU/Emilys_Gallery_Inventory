@@ -1,18 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Emily_s_Gallery_Inventory;
-using TestProject;
-
-namespace TestProject
+﻿namespace TestProject
 {
     internal class MenuItemRemovePainting : MenuItem
     {
-        public override bool ExecuteChoice()
+        public static void JustinMain()
         {
-            throw new NotImplementedException();
+            
+            
+        }
+
+        public override bool ExecuteChoice(List<string> painting)
+        {
+            Console.WriteLine("Enter painting to be deleted:");
+            string input = Console.ReadLine();
+
+            while (String.IsNullOrEmpty(input))
+            {
+
+                Console.WriteLine("Please enter another painting name: ");
+                input = Console.ReadLine();
+
+            }
+
+
+            if (!String.IsNullOrEmpty(input))
+            {
+                return true;
+            }
+            Console.WriteLine("The painting that will be deleted is: " + " " + input);
+            painting.Remove(input);
+            foreach (var value in painting)
+            {
+                Console.WriteLine();
+                Console.WriteLine("The painting that was deleted is : " + " " + value);
+
+            }
+
+            Console.ReadLine();
+            return true;
         }
     }
 }
