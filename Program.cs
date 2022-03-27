@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,10 +15,13 @@ namespace TestProject
     class MainClass
     {
         static List<MenuItem> menuItems = new List<MenuItem>();
-        static List<string> painting = new List<string> { "Kids", "Mom" };
+        static List<string> painting;
        
         public static void Main(string[] args)
         {
+            var json = File.ReadAllText("Paintings.json");
+            painting = JsonConvert.DeserializeObject<List<string>>(json);
+
             menuItems.Add(new MenuItemAddNewPainting());
             menuItems.Add(new MenuItemNumberofPaintings());
             menuItems.Add(new MenuItemRemovePainting());

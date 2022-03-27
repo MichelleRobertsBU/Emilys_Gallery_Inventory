@@ -9,11 +9,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-   
+    <CodeAnalysisDictionary Include="Program.cs" />
   </ItemGroup>
 
   <ItemGroup>
-    <CodeAnalysisDictionary Include="Program.cs" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Paintings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>
