@@ -2,10 +2,13 @@
 {
     internal class MenuItemRemovePainting : MenuItem
     {
+        public MenuItemRemovePainting()
+        {
+            this.Choice = "Remove Painting";
+        }
         public static void JustinMain()
         {
-            
-            
+
         }
 
         public override bool ExecuteChoice(List<string> painting)
@@ -40,3 +43,5 @@
         }
     }
 }
+    
+        

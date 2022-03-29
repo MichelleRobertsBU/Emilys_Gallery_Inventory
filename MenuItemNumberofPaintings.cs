@@ -2,17 +2,21 @@
 {
     internal class MenuItemNumberofPaintings : MenuItem
     {
-
-        public static void JustinMain2()
+        public MenuItemNumberofPaintings()
         {
-            var vals = new List<int> { 0, 1, 2, 3, 4, 5 };
-
-            Console.WriteLine($"There are {vals.Count} paintings in the list");
+            this.Choice = "Number of Paintings";
         }
 
+        public static void NumberMain()
+        {
+           
+        }
         public override bool ExecuteChoice(List<string> painting)
         {
-            throw new NotImplementedException();
+        var vals = new List<int> { 0, 1, 2, 3, 4, 5 };
+
+        Console.WriteLine($"There are {vals.Count} paintings in the list");
+            return true;
         }
     }
 }
