@@ -1,5 +1,5 @@
 ﻿namespace TestProject
-{
+{//Get Number of Paintings in List
     internal class MenuItemNumberofPaintings : MenuItem
     {
         public MenuItemNumberofPaintings()
@@ -9,13 +9,13 @@
 
         public static void NumberMain()
         {
-           
+
         }
         public override bool ExecuteChoice(List<string> painting)
         {
-        var vals = new List<int> { 0, 1, 2, 3, 4, 5 };
+            var totalpainting = painting.Count();
 
-        Console.WriteLine($"There are {vals.Count} paintings in the list");
+            Console.WriteLine($"There are {painting.Count()} paintings in the list");
             return true;
         }
     }

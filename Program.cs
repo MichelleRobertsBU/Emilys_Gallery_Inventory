@@ -1,10 +1,4 @@
 ﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TestProject;
 
 //EmilysArtInventory
 
@@ -16,15 +10,15 @@ namespace TestProject
     {
         static List<MenuItem> menuItems = new List<MenuItem>();
         static List<string> painting;
-       
+
         public static void Main(string[] args)
         {
             var json = File.ReadAllText("Paintings.json");
             painting = JsonConvert.DeserializeObject<List<string>>(json);
 
             menuItems.Add(new MenuItemAddNewPainting());
-            menuItems.Add(new MenuItemNumberofPaintings());
             menuItems.Add(new MenuItemRemovePainting());
+            menuItems.Add(new MenuItemNumberofPaintings());
             menuItems.Add(new MenuItemExit());
 
             var keepGoing = true;
@@ -71,7 +65,7 @@ namespace TestProject
             }
         }
     }
-   
+
 }
-    
+
 
