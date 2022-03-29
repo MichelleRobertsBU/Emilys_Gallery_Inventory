@@ -1,0 +1,34 @@
+{
+  "MyPaintings": [
+    {
+      "Customer ID": 1,
+      "Name": "Kids",
+      "Media": "oil",
+      "Size": "32"
+    },
+    {
+      "Customer ID": 2,
+      "Name": "Spock",
+      "Media": "acrylic",
+      "Size": "32"
+    },
+    {
+      "Customer ID": 3,
+      "Name": "MomWithGirls",
+      "Media": "oil",
+      "Size": "36"
+    },
+    {
+      "Customer ID": 4,
+      "Name": "LandscapeChurch",
+      "Media": "oil",
+      "Size": "36"
+    },
+    {
+      "Customer ID": 5,
+      "Name": "MeganDrawing",
+      "Media": "acrylic",
+      "Size": "32"
+    }
+  ]
+}
