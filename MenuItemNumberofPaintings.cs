@@ -1,4 +1,4 @@
-﻿namespace TestProject
+﻿namespace EmilysArtInventory
 {//Get Number of Paintings in List
     internal class MenuItemNumberofPaintings : MenuItem
     {

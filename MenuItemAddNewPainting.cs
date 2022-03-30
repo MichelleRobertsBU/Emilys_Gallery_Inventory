@@ -1,4 +1,4 @@
-﻿namespace TestProject
+﻿namespace EmilysArtInventory
 {//Add Painting to List
     internal class MenuItemAddNewPainting : MenuItem
     {

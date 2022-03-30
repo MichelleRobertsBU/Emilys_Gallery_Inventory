@@ -1,4 +1,4 @@
-﻿namespace TestProject
+﻿namespace EmilysArtInventory
 {
     public static class Library
     {

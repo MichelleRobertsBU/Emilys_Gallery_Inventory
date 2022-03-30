@@ -1,4 +1,4 @@
-﻿namespace TestProject
+﻿namespace EmilysArtInventory
 {//Remove Painting from List
     internal class MenuItemRemovePainting : MenuItem
     {

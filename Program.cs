@@ -2,7 +2,7 @@
 
 //EmilysArtInventory
 
-namespace TestProject
+namespace EmilysArtInventory
 {
 
     class MainClass
