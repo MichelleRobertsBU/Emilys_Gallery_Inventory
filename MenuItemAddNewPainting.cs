@@ -31,10 +31,8 @@
 
                 return true;
             }
-
             Console.ReadLine();
             return true;
-
         }
     }
 }
