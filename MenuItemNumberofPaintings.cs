@@ -7,16 +7,14 @@
             this.Choice = "Number of Paintings";
         }
 
-        public static void NumberMain()
-        {
-
-        }
         public override bool ExecuteChoice(List<string> painting)
         {
             var totalpainting = painting.Count();
 
-            Console.WriteLine($"There are {painting.Count()} paintings in the list");
+            Console.WriteLine($"There are {painting.Count()} paintings in the list.");
+            Console.WriteLine();
             return true;
         }
     }
+
 }

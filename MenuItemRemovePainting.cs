@@ -24,14 +24,11 @@
                 Console.WriteLine("The painting that was deleted is: " + " " + input);
                 painting.Remove(input);
                 foreach (var value in painting)
-                {
-                    //Show new list
+                {//Show new list
                     Console.WriteLine();
-
                 }
                 return true;
             }
-
             Console.ReadLine();
             return true;
         }

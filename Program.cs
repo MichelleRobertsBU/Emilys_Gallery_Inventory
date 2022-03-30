@@ -20,12 +20,14 @@ namespace TestProject
                 var json = File.ReadAllText("Paintings.json");
                 painting = JsonConvert.DeserializeObject<List<string>>(json);
 
+
                 menuItems.Add(new MenuItemAddNewPainting());
                 menuItems.Add(new MenuItemRemovePainting());
                 menuItems.Add(new MenuItemNumberofPaintings());
                 menuItems.Add(new MenuItemExit());
 
                 var keepGoing = true;
+
                 while (keepGoing)
                 {
                     keepGoing = MainMenu();
@@ -36,10 +38,14 @@ namespace TestProject
                 Console.WriteLine("Program exited");
             }
         }
-       
+
         public static bool MainMenu()
         {
-
+            string message = null;
+            if (message is not null)
+            {
+                Console.WriteLine(message.Length);
+            }
             foreach (string p in painting)
             {
                 Console.WriteLine(p);

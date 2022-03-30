@@ -20,7 +20,7 @@
             }
             if (!String.IsNullOrEmpty(input))
             {
-               
+
                 Console.WriteLine("The painting that was added to the list is: " + " " + input);
                 painting.Add(input);
                 foreach (var value in painting)
